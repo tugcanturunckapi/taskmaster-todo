@@ -131,7 +131,8 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-semibold mb-4">Disclaimer</h2>
               <p className="text-gray-400">
                 TaskMaster does not guarantee that its services will be
-                uninterrupted or error-free. We provide our services "as is".
+                uninterrupted or error-free. We provide our services &quot;as
+                is&quot;.
               </p>
             </div>
 
