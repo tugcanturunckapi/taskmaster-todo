@@ -82,7 +82,7 @@ const TermsOfService = () => {
           </div>
 
           <p className="text-gray-300 mb-4">
-            By using TaskMaster&apos;s services, you agree to these terms.
+            By using our &quot;Services&quot;, you agree to these terms.
           </p>
 
           <div className="space-y-8">
