@@ -10,6 +10,7 @@ import {
   FaCalendarAlt,
   FaTag,
   FaStar,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 const TipsAndTricks = () => {

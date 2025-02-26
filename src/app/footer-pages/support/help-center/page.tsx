@@ -99,9 +99,8 @@ const HelpCenter = () => {
           className="mt-16 text-center"
         >
           <h2 className="text-2xl font-semibold mb-4">Still need help?</h2>
-          <p className="text-gray-400 mb-8">
-            If you couldn't find what you're looking for, you can contact our
-            support team.
+          <p className="text-gray-300 mb-4">
+            We&apos;re here to help you&apos;re successful with TaskMaster.
           </p>
           <a
             href="/footer-pages/support/contact"

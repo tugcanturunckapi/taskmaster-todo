@@ -81,10 +81,8 @@ const TermsOfService = () => {
             <p>Last updated: {new Date().toLocaleDateString()}</p>
           </div>
 
-          <p className="text-gray-300 mb-12">
-            These terms of service constitute a legal agreement governing your
-            use of TaskMaster services. By using our services, you agree to
-            these terms.
+          <p className="text-gray-300 mb-4">
+            By using TaskMaster&apos;s services, you agree to these terms.
           </p>
 
           <div className="space-y-8">
@@ -124,7 +122,7 @@ const TermsOfService = () => {
               </h2>
               <p className="text-gray-400">
                 All rights reserved by TaskMaster. All content, design, logos,
-                and other materials on the platform are TaskMaster's
+                and other materials on the platform are TaskMaster&apos;s
                 intellectual property.
               </p>
             </div>
@@ -158,6 +156,10 @@ const TermsOfService = () => {
                 <p>Address: 123 Technology Street, Software Avenue</p>
               </div>
             </div>
+
+            <p className="text-gray-300 mb-4">
+              &ldquo;TaskMaster&rdquo; refers to our task management platform.
+            </p>
           </div>
         </motion.div>
       </div>

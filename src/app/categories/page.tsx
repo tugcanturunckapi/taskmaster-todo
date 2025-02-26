@@ -3,12 +3,6 @@
 import { useContext, useState } from "react";
 import { TodoContext } from "@/components/ClientLayout";
 
-interface Category {
-  id: string;
-  name: string;
-  color: string;
-}
-
 export default function CategoriesPage() {
   const { categories, setCategories } = useContext(TodoContext);
   const [newCategory, setNewCategory] = useState("");

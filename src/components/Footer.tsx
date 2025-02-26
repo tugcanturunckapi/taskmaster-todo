@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const Footer = () => {

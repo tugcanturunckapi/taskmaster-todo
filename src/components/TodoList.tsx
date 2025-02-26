@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useContext } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import TodoItem from "./TodoItem";
 import AddTodo from "./AddTodo";
 import { TodoContext } from "./ClientLayout";

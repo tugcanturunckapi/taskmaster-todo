@@ -69,6 +69,9 @@ const FAQs = () => {
           <p className="text-xl text-gray-400">
             Find answers to common questions about TaskMaster
           </p>
+          <p className="text-gray-300 mb-4">
+            Here&apos;s what you&apos;ll find in our FAQs section.
+          </p>
         </motion.div>
 
         <div className="space-y-4">

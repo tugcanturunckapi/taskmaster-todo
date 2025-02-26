@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaListUl, FaCheck, FaEdit, FaTrash, FaSort } from "react-icons/fa";
+import { FaListUl, FaCheck, FaEdit, FaSort } from "react-icons/fa";
 
 const TaskManagementFeatures = () => {
   return (

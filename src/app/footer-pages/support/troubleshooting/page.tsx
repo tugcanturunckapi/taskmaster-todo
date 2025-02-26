@@ -156,12 +156,12 @@ const TroubleshootingPage = () => {
         </motion.div>
 
         <div className="space-y-8">
-          {commonIssues.map((category, categoryIndex) => (
+          {commonIssues.map((category) => (
             <motion.div
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-[#1A1B23] rounded-xl p-6 border border-gray-800"
             >
               <div className="flex items-center space-x-4 mb-6">
@@ -170,7 +170,7 @@ const TroubleshootingPage = () => {
               </div>
 
               <div className="space-y-6">
-                {category.problems.map((problem, problemIndex) => (
+                {category.problems.map((problem) => (
                   <div
                     key={problem.title}
                     className="bg-[#2A2B33] rounded-lg p-6 space-y-4"

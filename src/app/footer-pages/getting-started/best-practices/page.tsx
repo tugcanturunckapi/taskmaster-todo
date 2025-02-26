@@ -11,6 +11,7 @@ import {
   FaLayerGroup,
   FaClock,
   FaChartLine,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 const BestPractices = () => {
@@ -89,6 +90,10 @@ const BestPractices = () => {
           <p className="text-xl text-gray-400">
             Guidelines for effective task management
           </p>
+          <p className="text-gray-300 mb-4">
+            Here&apos;s what you&apos;ll learn about TaskMaster&apos;s best
+            practices for optimal task management.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -154,6 +159,10 @@ const BestPractices = () => {
               </ul>
             </div>
           </div>
+          <p className="text-gray-300 mb-4">
+            Don&apos;t worry if you can&apos;t implement all these practices at
+            once.
+          </p>
         </motion.div>
       </div>
     </div>

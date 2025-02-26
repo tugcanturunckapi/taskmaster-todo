@@ -79,6 +79,11 @@ const PrivacyPolicy = () => {
             Last updated: {new Date().toLocaleDateString()}
           </p>
 
+          <p className="text-gray-300 mb-4">
+            We take our users&apos; privacy seriously and are committed to
+            protecting it.
+          </p>
+
           <p className="text-gray-300 mb-12">
             At TaskMaster, we are committed to protecting our users' privacy and
             keeping their personal data secure. This privacy policy explains how

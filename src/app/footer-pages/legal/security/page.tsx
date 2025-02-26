@@ -176,6 +176,10 @@ const Security = () => {
               </div>
             </div>
           </div>
+
+          <div className="text-gray-300 mb-4">
+            TaskMaster&apos;s commitment to security is unwavering.
+          </div>
         </motion.div>
       </div>
     </div>
