@@ -2,7 +2,11 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Draggable } from "@hello-pangea/dnd";
+import {
+  Draggable,
+  DraggableProvided,
+  DraggableStateSnapshot,
+} from "@hello-pangea/dnd";
 import Pomodoro from "./Pomodoro";
 
 interface TodoItemProps {
@@ -103,7 +107,7 @@ const TodoItem = ({
   return (
     <>
       <Draggable draggableId={id} index={index}>
-        {(provided, snapshot) => (
+        {(provided: DraggableProvided, snapshot: DraggableStateSnapshot) => (
           <div
             ref={provided.innerRef}
             {...provided.draggableProps}
