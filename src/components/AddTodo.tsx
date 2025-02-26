@@ -50,7 +50,9 @@ const AddTodo = ({ onAdd, categories }: AddTodoProps) => {
         <motion.input
           type="text"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setTitle(e.target.value)
+          }
           onFocus={() => setIsExpanded(true)}
           placeholder="Add a new task..."
           className="flex-grow bg-[#2A2B33] text-gray-200 rounded-lg px-4 py-2 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all outline-none"
