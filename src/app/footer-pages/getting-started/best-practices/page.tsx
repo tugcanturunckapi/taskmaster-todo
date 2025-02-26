@@ -8,7 +8,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 
-const BestPractices = () => {
+export default function BestPractices() {
   return (
     <div className="min-h-screen bg-[#0A0B14] text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -94,6 +94,4 @@ const BestPractices = () => {
       </div>
     </div>
   );
-};
-
-export default BestPractices;
+}
