@@ -114,10 +114,10 @@ const QuickStartGuide = () => {
                 Common Mistakes
               </h3>
               <ul className="space-y-2 text-gray-400">
-                <li>• Don't add too many tasks</li>
-                <li>• Don't keep tasks too general</li>
-                <li>• Don't neglect prioritization</li>
-                <li>• Don't skip breaks</li>
+                <li>• Don&apos;t add too many tasks</li>
+                <li>• Don&apos;t keep tasks too general</li>
+                <li>• Don&apos;t neglect prioritization</li>
+                <li>• Don&apos;t skip breaks</li>
               </ul>
             </div>
           </div>

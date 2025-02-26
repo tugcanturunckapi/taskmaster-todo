@@ -119,7 +119,8 @@ const FAQs = () => {
         >
           <h2 className="text-2xl font-semibold mb-6">Still Have Questions?</h2>
           <p className="text-gray-400 mb-6">
-            Can't find the answer you're looking for? Contact our support team.
+            Can&apos;t find the answer you&apos;re looking for? Contact our
+            support team.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <a
