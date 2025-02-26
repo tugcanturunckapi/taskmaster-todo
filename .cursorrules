@@ -1,0 +1,49 @@
+# To-Do List Uygulaması 
+
+## Proje Genel Yapısı
+- Proje, Next.js (React framework) ve Tailwind CSS kullanılarak geliştirilecektir.
+- Modern ve kullanıcı dostu bir UI/UX tasarımı hedeflenmektedir.
+- Proje, Cursor AI ile geliştirilecek ve AI destekli özellikler eklenebilecektir.
+
+## Component Yapısı
+1. **Header Component**: Uygulamanın başlığı ve genel navigasyon butonları.
+2. **TodoList Component**: To-do listelerini görüntüleyen ana component.
+3. **TodoItem Component**: Her bir to-do öğesini temsil eden component.
+4. **AddTodo Component**: Yeni to-do eklemek için form içeren component.
+5. **Footer Component**: Uygulama hakkında bilgiler ve sosyal medya bağlantıları.
+
+## Güvenlik Ayarları
+1. **Next.js Güvenlik Önlemleri**:
+   - `next.config.js` dosyasında güvenlik başlıkları (security headers) ekleyin.
+   - Content Security Policy (CSP) ayarlarını yapılandırın.
+   - XSS saldırılarına karşı koruma için `X-XSS-Protection` başlığını etkinleştirin.
+
+2. **Form Güvenliği**:
+   - Form verilerini işlerken `csrf` token kullanın.
+   - Kullanıcı girdilerini her zaman validate edin ve sanitize edin.
+   - SQL Injection ve XSS saldırılarına karşı koruma sağlayın.
+
+3. **API Güvenliği**:
+   - API rotalarınızı korumak için JWT (JSON Web Token) kullanın.
+   - API isteklerini rate limiting ile sınırlandırın.
+
+## Ek Özellik Önerileri
+1. **Kullanıcı Kimlik Doğrulama**:
+   - Kullanıcıların kaydolması ve giriş yapması için bir kimlik doğrulama sistemi ekleyin.
+   - NextAuth.js gibi bir kütüphane kullanarak Google, GitHub gibi OAuth sağlayıcıları ile entegrasyon yapın.
+
+
+2. **Çoklu Dil Desteği**:
+   - Uygulamayı uluslararası kullanıcılar için erişilebilir kılmak adına çoklu dil desteği ekleyin.
+
+
+3. **Veri Yedekleme ve Senkronizasyon**:
+   - Kullanıcı verilerini bulut tabanlı bir veritabanında saklayın ve cihazlar arası senkronizasyon sağlayın.
+
+## Proje Yapısı
+- `components/`: Tüm React component'ları bu klasörde tutulacak.
+- `pages/`: Next.js sayfaları bu klasörde yer alacak.
+- `styles/`: Tailwind CSS ve özel stil dosyaları burada bulunacak.
+- `utils/`: Yardımcı fonksiyonlar ve API istekleri için utility dosyaları.
+- `public/`: Statik dosyalar (resimler, ikonlar vb.) burada yer alacak.
+

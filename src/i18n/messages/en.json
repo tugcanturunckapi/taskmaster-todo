@@ -1,0 +1,13 @@
+{
+  "app": {
+    "title": "TaskMaster",
+    "description": "Modern Todo List Application"
+  },
+  "nav": {
+    "allTasks": "All Tasks",
+    "active": "Active",
+    "completed": "Completed",
+    "categories": "Categories",
+    "newTask": "New Task"
+  }
+}
