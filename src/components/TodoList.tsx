@@ -5,7 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import TodoItem from "./TodoItem";
 import AddTodo from "./AddTodo";
 import { TodoContext } from "./ClientLayout";
-import { DragDropContext, Droppable, DropResult } from "@hello-pangea/dnd";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "@hello-pangea/dnd";
 
 interface TodoListProps {
   initialFilter?: "all" | "active" | "completed";

@@ -1,23 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
 import TodoList from "@/components/TodoList";
-
-interface Category {
-  id: string;
-  name: string;
-  color: string;
-}
-
-interface TodoContextType {
-  categories: Category[];
-  setCategories: (categories: Category[]) => void;
-}
-
-export const TodoContext = createContext<TodoContextType>({
-  categories: [],
-  setCategories: () => {},
-});
 
 export default function Home() {
   return (
