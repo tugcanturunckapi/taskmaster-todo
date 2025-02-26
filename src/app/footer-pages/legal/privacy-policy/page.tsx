@@ -85,9 +85,8 @@ const PrivacyPolicy = () => {
           </p>
 
           <p className="text-gray-300 mb-12">
-            At TaskMaster, we are committed to protecting our users' privacy and
-            keeping their personal data secure. This privacy policy explains how
-            we collect, use, and protect your data.
+            At TaskMaster, we are committed to protecting our users&apos;
+            privacy and keeping their personal data secure.
           </p>
 
           <div className="space-y-8">

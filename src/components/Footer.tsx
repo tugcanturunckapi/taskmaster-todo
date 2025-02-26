@@ -1,6 +1,5 @@
 "use client";
 
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const Footer = () => {

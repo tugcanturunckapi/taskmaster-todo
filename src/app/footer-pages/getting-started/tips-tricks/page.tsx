@@ -1,17 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaLightbulb,
-  FaClock,
-  FaKeyboard,
-  FaMobile,
-  FaChartLine,
-  FaCalendarAlt,
-  FaTag,
-  FaStar,
-  FaCheckCircle,
-} from "react-icons/fa";
+import { FaLightbulb, FaClock, FaTag, FaStar } from "react-icons/fa";
 
 const TipsAndTricks = () => {
   const tips = [

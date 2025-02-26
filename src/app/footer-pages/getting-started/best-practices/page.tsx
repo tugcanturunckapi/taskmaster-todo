@@ -2,6 +2,11 @@
 
 import { motion } from "framer-motion";
 import {
+  FaLightbulb,
+  FaListUl,
+  FaCalendarCheck,
+  FaComments,
+  FaSync,
   FaClipboardCheck,
   FaBrain,
   FaUsers,

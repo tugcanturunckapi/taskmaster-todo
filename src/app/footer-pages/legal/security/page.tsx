@@ -89,11 +89,9 @@ const Security = () => {
           </div>
 
           <div className="text-gray-300 mb-12">
-            <p>
-              At TaskMaster, we implement the highest standards to ensure the
-              security of our users' data. This page details how we protect your
-              information.
-            </p>
+            At TaskMaster, we implement the highest standards to ensure the
+            security of our users&apos; data. This page details how we protect
+            your information.
           </div>
 
           <div className="space-y-8">
