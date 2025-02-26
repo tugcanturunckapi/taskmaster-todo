@@ -65,7 +65,7 @@ export default function ClientLayout({
 
   // Load data from localStorage on component mount
   useEffect(() => {
-    if (!isClient) return; // Only run on client-side
+    if (!isClient) return;
 
     try {
       const savedCategories = localStorage.getItem("categories");
@@ -92,14 +92,12 @@ export default function ClientLayout({
 
   // Save data to localStorage when they change
   useEffect(() => {
-    if (!isClient || isLoading) return; // Only run on client-side and after initial load
-
+    if (!isClient || isLoading) return;
     localStorage.setItem("categories", JSON.stringify(categories));
   }, [categories, isLoading, isClient]);
 
   useEffect(() => {
-    if (!isClient || isLoading) return; // Only run on client-side and after initial load
-
+    if (!isClient || isLoading) return;
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos, isLoading, isClient]);
 
@@ -151,6 +149,10 @@ export default function ClientLayout({
 
     setTodos(updatedItems);
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <TodoContext.Provider
