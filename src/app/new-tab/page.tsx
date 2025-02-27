@@ -2,15 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  FaGoogle,
-  FaPlus,
-  FaTimes,
-  FaEdit,
-  FaEnvelope,
-  FaTrash,
-  FaPencilAlt,
-} from "react-icons/fa";
+import { FaGoogle, FaPlus, FaEdit, FaTrash } from "react-icons/fa";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import Image from "next/image";
 
@@ -57,13 +49,10 @@ export default function NewTab() {
   const [currentTime, setCurrentTime] = useState("");
   const [currentDate, setCurrentDate] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [isEditing, setIsEditing] = useState(false);
   const [newShortcutTitle, setNewShortcutTitle] = useState("");
   const [newShortcutUrl, setNewShortcutUrl] = useState("");
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingShortcut, setEditingShortcut] = useState<Shortcut | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [isDragOver, setIsDragOver] = useState(false);
 
   useEffect(() => {
     const updateDateTime = () => {
