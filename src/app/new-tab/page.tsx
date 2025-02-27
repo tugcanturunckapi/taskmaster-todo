@@ -140,12 +140,13 @@ export default function NewTab() {
     setShortcuts(shortcuts.filter((shortcut) => shortcut.id !== id));
   };
 
-  const getFaviconUrl = (url: string) => {
-    if (url === "/") {
-      return null; // TaskMaster için özel logo kullanacağız
+  const getFaviconUrl = (url: string): string => {
+    try {
+      const domain = extractDomain(url);
+      return `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+    } catch {
+      return "https://www.google.com/s2/favicons?domain=example.com&sz=32";
     }
-    const domain = extractDomain(url);
-    return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
   };
 
   const handleDragEnd = (result: {
@@ -360,6 +361,7 @@ export default function NewTab() {
                               width={24}
                               height={24}
                               className="w-6 h-6"
+                              unoptimized
                             />
                           )}
                           <span className="text-xs text-gray-300 text-center line-clamp-1">
