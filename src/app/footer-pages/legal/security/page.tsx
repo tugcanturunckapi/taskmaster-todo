@@ -107,8 +107,8 @@ const Security = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Data Processing</h2>
             <p className="text-gray-400">
-              We don't store any sensitive information. All data is encrypted
-              and processed securely.
+              We don&apos;t store any sensitive information. All data is
+              encrypted and processed securely.
             </p>
           </div>
 
