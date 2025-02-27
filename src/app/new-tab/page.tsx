@@ -176,7 +176,6 @@ export default function NewTab() {
   const handleUrlDrop = (e: React.DragEvent) => {
     e.preventDefault();
 
-    // URL'i al
     const url =
       e.dataTransfer.getData("text/uri-list") ||
       e.dataTransfer.getData("text/plain");
@@ -184,7 +183,6 @@ export default function NewTab() {
     if (url) {
       try {
         const urlObj = new URL(url);
-        // Yeni kısayol oluştur
         const newShortcut = {
           id: Math.random().toString(36).substring(7),
           title:
@@ -196,11 +194,11 @@ export default function NewTab() {
             urlObj.hostname
               .replace(/^www\./, "")
               .split(".")[0]
-              .slice(1), // Domain adından başlık oluştur
+              .slice(1),
           url: url,
         };
         setShortcuts([...shortcuts, newShortcut]);
-      } catch (error) {
+      } catch {
         console.error("Invalid URL dropped");
       }
     }
