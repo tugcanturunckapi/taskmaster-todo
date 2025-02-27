@@ -9,8 +9,10 @@ import {
   FaEdit,
   FaEnvelope,
   FaTrash,
+  FaPencilAlt,
 } from "react-icons/fa";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import Image from "next/image";
 
 interface Shortcut {
   id: string;
@@ -61,6 +63,7 @@ export default function NewTab() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingShortcut, setEditingShortcut] = useState<Shortcut | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [isDragOver, setIsDragOver] = useState(false);
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -156,17 +159,18 @@ export default function NewTab() {
     return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
   };
 
-  const handleDragEnd = (result: any) => {
+  const handleDragEnd = (result: {
+    destination: { index: number } | null;
+    source: { index: number };
+  }) => {
     if (!result.destination) return;
 
-    const sourceIndex = result.source.index;
-    const destinationIndex = result.destination.index;
+    const items = Array.from(shortcuts);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
 
-    const newShortcuts = Array.from(shortcuts);
-    const [removed] = newShortcuts.splice(sourceIndex, 1);
-    newShortcuts.splice(destinationIndex, 0, removed);
-
-    setShortcuts(newShortcuts);
+    setShortcuts(items);
+    localStorage.setItem("shortcuts", JSON.stringify(items));
   };
 
   const handleUrlDrop = (e: React.DragEvent) => {
@@ -288,7 +292,13 @@ export default function NewTab() {
           target="_blank"
           className="inline-flex items-center justify-center p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all mb-4"
         >
-          <img src="/Gmail_icon.svg" alt="Gmail" className="w-5 h-5" />
+          <Image
+            src="/Gmail_icon.svg"
+            alt="Gmail"
+            width={20}
+            height={20}
+            className="w-5 h-5"
+          />
         </motion.a>
         <p className="text-4xl font-light text-gray-300 mb-2">{currentTime}</p>
         <p className="text-xl text-gray-400 mb-4">{currentDate}</p>
@@ -357,14 +367,12 @@ export default function NewTab() {
                               T
                             </div>
                           ) : (
-                            <img
+                            <Image
                               src={getFaviconUrl(shortcut.url)}
                               alt={shortcut.title}
-                              className="w-8 h-8 mb-2 rounded-lg"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).src =
-                                  "https://via.placeholder.com/32";
-                              }}
+                              width={24}
+                              height={24}
+                              className="w-6 h-6"
                             />
                           )}
                           <span className="text-xs text-gray-300 text-center line-clamp-1">
