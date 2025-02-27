@@ -78,7 +78,11 @@ export default function ClientLayout({
       if (savedTodos) {
         const parsedTodos = JSON.parse(savedTodos);
         const todosWithOrder = parsedTodos.map((todo: Todo, index: number) => ({
-          ...todo,
+          id: todo.id || Math.random().toString(36).substring(7),
+          title: todo.title || "",
+          completed: todo.completed || false,
+          priority: todo.priority || "medium",
+          categoryId: todo.categoryId,
           order: todo.order ?? index,
         }));
         setTodos(todosWithOrder);
